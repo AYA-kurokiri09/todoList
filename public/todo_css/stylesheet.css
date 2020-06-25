@@ -1,0 +1,25 @@
+* {margin: 0; padding: 0;
+}
+
+h1 {font-size: 36pt;
+    color: #000;
+padding-bottom: 20px;}
+
+h2 {font-size: 24pt;
+    color: #000;
+    padding-bottom: 20px;}
+    
+p {font-size: 12pt;}
+
+.container {margin-left: 5px;}
+
+.condition {display: flex;
+        align-items: center;}
+
+table {margin: 20px 0 40px 0;
+       border: 1px solid #000;
+       /*border-collapse: collapse;*/}
+td {padding: 0 5px;}
+
+#tableList {font-weight: bold;}
+
