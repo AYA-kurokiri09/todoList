@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-
 <body>
     <h1>Todoリスト</h1>
     <input type="radio" name="all" value="すべて">
@@ -55,4 +54,5 @@
     <input type="text" name="new">
     <input type="submit" value="追加">
 </body>
+</html>
 </html>
