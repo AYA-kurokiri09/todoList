@@ -14,6 +14,7 @@
             <input type="radio" name="radio"><p>作業中</p>&ensp;
             <input type="radio" name="radio"><p>完了</p>
         </div>
+        
         <table>
             <tr>
                 <th id="tableList">ID</th>
