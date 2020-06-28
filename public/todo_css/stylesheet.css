@@ -17,8 +17,8 @@ p {font-size: 12pt;}
         align-items: center;}
 
 table {margin: 20px 0 40px 0;
-       border: 1px solid #000;
-       /*border-collapse: collapse;*/}
+       border: 1px solid #000;}
+       
 td {padding: 0 5px;}
 
 #tableList {font-weight: bold;}

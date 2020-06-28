@@ -10,7 +10,7 @@
     <div class="container">
         <h1>ToDoリスト</h1>
         <div class="condition">
-            <input type="radio" name="all"><p>すべて</p>&ensp;
+            <input type="radio" name="all" checked="checked"><p>すべて</p>&ensp;
             <input type="radio" name="working"><p>作業中</p>&ensp;
             <input type="radio" name="finished"><p>完了</p>
         </div>
@@ -20,15 +20,21 @@
                 <td id="tableList">コメント</td>
                 <td id="tableList">状態</td>
             </tr>
+            @foreach ($items as $item)
             <tr>
-                <td>00</td>
-                <td>ここにコメントする</td>
-                <td><input type="submit" value="作業中">&nbsp;<input type="submit" value="削除"></td>
+                <td>{{$item->id}}</td>
+                <td>{{$item->comment}}</td>
+                <td><input type="submit" value="作業中"></td>
+                <td><input type="submit" value="削除"></td>
             </tr>
+            @endforeach
         </table>
         <h2>新規タスクの追加</h2>
-        <input type="text" name="new">
-        <input type="submit" value="追加">
+        <form action="/todo" method="post">
+        @csrf
+            <input type="text" name="input" value="{{$input}}">
+            <input type="submit" value="追加">
+        </form>
     </div>
 </body>
 </html>
