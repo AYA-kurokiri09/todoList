@@ -10,15 +10,15 @@
     <div class="container">
         <h1>ToDoリスト</h1>
         <div class="condition">
-            <input type="radio" name="all" checked="checked"><p>すべて</p>&ensp;
-            <input type="radio" name="working"><p>作業中</p>&ensp;
-            <input type="radio" name="finished"><p>完了</p>
+            <input type="radio" name="radio" checked="checked"><p>すべて</p>&ensp;
+            <input type="radio" name="radio"><p>作業中</p>&ensp;
+            <input type="radio" name="radio"><p>完了</p>
         </div>
         <table>
             <tr>
-                <td id="tableList">ID</td>
-                <td id="tableList">コメント</td>
-                <td id="tableList">状態</td>
+                <th id="tableList">ID</th>
+                <th id="tableList">コメント</th>
+                <th id="tableList">状態</th>
             </tr>
             @foreach ($items as $item)
             <tr>
