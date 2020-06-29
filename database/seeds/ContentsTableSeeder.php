@@ -12,8 +12,8 @@ class ContentsTableSeeder extends Seeder
     public function run()
     {
         DB::table('contents')->insert([  
-            'comment' => 'シーダーコメントです',
-            'condition' => '作業中/完了',
+            'comment' => 'タスク1',
+            'condition' => '作業中',
     ]);
     }
 }
