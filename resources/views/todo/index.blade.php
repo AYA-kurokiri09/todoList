@@ -14,7 +14,6 @@
             <input type="radio" name="radio"><p>作業中</p>&ensp;
             <input type="radio" name="radio"><p>完了</p>
         </div>
-        
         <table>
             <tr>
                 <th id="tableList">ID</th>
@@ -33,7 +32,7 @@
         <h2>新規タスクの追加</h2>
         <form action="/todo" method="post">
         @csrf
-            <input type="text" name="input" value="{{$input}}">
+            <input type="text" name="input">
             <input type="submit" value="追加">
         </form>
     </div>
