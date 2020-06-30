@@ -8,9 +8,9 @@ use Illuminate\Http\Response;
 
 class TodoController extends Controller
 {
-    public function index(Request $request) {
+    public function index() {
         $items = Content::all();
-        return view('todo.index', ['items' => $items], ['input' => '']);
+        return view('todo.index', ['items' => $items]);
     }
 
     public function add(Request $request) {
@@ -19,8 +19,6 @@ class TodoController extends Controller
             'comment' => $request->input,
             'condition' => '作業中',])
             ->save();
-
-        $items = Content::all();
-        return view('todo.index', ['items' => $items], ['input' => '']);
+        return redirect('/todo');
     }
 }
