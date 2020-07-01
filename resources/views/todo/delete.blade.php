@@ -16,19 +16,19 @@
         </div>
         <table>
             <tr>
-                <th id="tableList">ID</th>
-                <th id="tableList">コメント</th>
-                <th id="tableList">状態</th>
+                <td id="tableList">ID</td>
+                <td id="tableList">コメント</td>
+                <td id="tableList">状態</td>
             </tr>
             @foreach ($items as $item)
-            <form action="/todo/delete" method="post">
+            <form action="/todo/delete" method="get">
             @csrf
             <tr>
-                <td >{{$item->id}}</td>
+                <td>{{$item->id}}</td>
                 <td>{{$item->comment}}</td>
                 <td><input type="submit" value="作業中"></td>
-                <td><input type="hidden" name="id" value="{{$item->id}}"><input type="submit" name="remove" value="削除"></td>
-                <!--input2つ並べは多分正しい。参考：https://teratail.com/questions/226924 -->
+                <!-- <input type="hidden" name="id" value="" > -->
+                <td><input type="submit" name="remove" value="削除"></td>
             </form>
             </tr>
             @endforeach
@@ -37,8 +37,12 @@
         <form action="/todo" method="post">
         @csrf
             <input type="text" name="input">
-            <input type="submit" value="追加">
+            <input type="submit" name="add" value="追加">
         </form>
+
+        <!--@if (isset($find))
+        <p>{{$find}}</p>
+        @endif -->
     </div>
 </body>
 </html>
