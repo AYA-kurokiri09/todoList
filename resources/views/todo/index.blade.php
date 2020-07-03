@@ -28,7 +28,6 @@
                 <td>{{$item->comment}}</td>
                 <td><input type="submit" value="作業中"></td>
                 <td><input type="hidden" name="id" value="{{$item->id}}"><input type="submit" name="remove" value="削除"></td>
-                <!--input2つ並べは多分正しい。参考：https://teratail.com/questions/226924 -->
             </form>
             </tr>
             @endforeach
