@@ -24,12 +24,6 @@ class TodoController extends Controller
 
     public function delete(Request $request) {
         Content::find($request->id)->delete();
-        $items = Content::all();
-        $n = 1;
-        foreach($items as $item => $n) {
-            Content::find($item->id)->update(['id' => '{{$n}}']);
-            $n++;
-        }
         return redirect('/todo');
     }
 }

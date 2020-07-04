@@ -6,5 +6,5 @@ use Illuminate\Database\Eloquent\Model;
 
 class Content extends Model
 {
-    protected $fillable = array('id', 'comment','condition' );
+    protected $guarded = array('id');
 }
