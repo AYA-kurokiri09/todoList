@@ -21,13 +21,18 @@
                 <th id="tableList">状態</th>
             </tr>
             @foreach ($items as $item)
+            <form action="/todo/delete" method="post">
+            @csrf
             <tr>
-                <td>{{$item->id}}</td>
+                <td >{{$loop->iteration}}</td>
                 <td>{{$item->comment}}</td>
                 <td><input type="submit" value="作業中"></td>
-                <td><input type="submit" value="削除"></td>
+                <td><input type="hidden" name="id" value="{{$item->id}}"><input type="submit" name="remove" value="削除"></td>
+            </form>
             </tr>
             @endforeach
+
+           
         </table>
         <h2>新規タスクの追加</h2>
         <form action="/todo" method="post">

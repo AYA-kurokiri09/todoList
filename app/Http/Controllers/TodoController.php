@@ -21,4 +21,9 @@ class TodoController extends Controller
             ->save();
         return redirect('/todo');
     }
+
+    public function delete(Request $request) {
+        Content::find($request->id)->delete();
+        return redirect('/todo');
+    }
 }
