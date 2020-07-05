@@ -26,8 +26,12 @@
             <tr>
                 <td >{{$loop->iteration}}</td>
                 <td>{{$item->comment}}</td>
-                <td><input type="submit" value="作業中"></td>
-                <td><input type="hidden" name="id" value="{{$item->id}}"><input type="submit" name="remove" value="削除"></td>
+                <form action="/todo/toggle"  method="post">
+                <td><input type="hidden" name="id" value="{{$item->id}}">
+                <input type="submit" value="{{$item->condition}}"></td>
+                </form>
+                <td><input type="hidden" name="id" value="{{$item->id}}">
+                <input type="submit" name="remove" value="削除"></td>
             </form>
             </tr>
             @endforeach
