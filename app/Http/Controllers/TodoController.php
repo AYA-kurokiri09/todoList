@@ -29,10 +29,10 @@ class TodoController extends Controller
 
     public function toggle(Request $request) {
         $param = Content::find($request->id);
-        if ($request->condition = "作業中") {
-            $param->update(['condition' => '完了'])->save();
-        } else {
-            $param->update(['condition' => '作業中'])->save();
+        if ($request->condition = '作業中') {
+            $param->fill(['condition' => '完了'])->save();
+        } elseif ($request->condition = '完了') {
+            $param->fill(['condition' => '作業中'])->save();
         }
         return redirect('/todo');
     }
