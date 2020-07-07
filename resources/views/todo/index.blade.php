@@ -27,12 +27,12 @@
                 <td><form action="/todo/toggle"  method="post">
                 @csrf
                 <input type="hidden" name="id" value="{{$item->id}}">
-                <input type="submit" value="{{$item->condition}}">
+                <input type="submit" name="condition" value="{{$item->condition}}">
                 </form></td>
                 <td><form action="/todo/delete" method="post">
                 @csrf
                 <input type="hidden" name="id" value="{{$item->id}}">
-                <input type="submit" name="remove" value="削除">
+                <input type="submit" value="削除">
                 </form></td>
             </tr>
             @endforeach
