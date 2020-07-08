@@ -36,4 +36,12 @@ class TodoController extends Controller
         }
         return redirect('/todo');
     }
+
+    public function choose(Request $request) {
+        //ラジオボタンのテキストを取得、その値をもとにif文を作る。
+        //condition === すべて
+        //condition === 作業中
+        //condition === 完了
+
+    }
 }

@@ -13,6 +13,7 @@
             <input type="radio" name="radio" checked="checked"><p>すべて</p>&ensp;
             <input type="radio" name="radio"><p>作業中</p>&ensp;
             <input type="radio" name="radio"><p>完了</p>
+            <!--ラジオボタン点灯部分は必ず1つになるようにする-->
         </div>
         <table>
             <tr>
