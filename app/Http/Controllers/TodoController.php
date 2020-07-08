@@ -26,4 +26,14 @@ class TodoController extends Controller
         Content::find($request->id)->delete();
         return redirect('/todo');
     }
+
+    public function toggle(Request $request) {
+        $param = Content::find($request->id);
+        if ($request->condition === '作業中') {
+            $param->fill(['condition' => '完了'])->save();
+        } elseif ($request->condition === '完了') {
+            $param->fill(['condition' => '作業中'])->save();
+        }
+        return redirect('/todo');
+    }
 }
