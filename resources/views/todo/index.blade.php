@@ -9,12 +9,11 @@
 <body>
     <div class="container">
         <h1>ToDoリスト</h1>
-        <div class="condition">
-            <input type="radio" name="radio" checked="checked"><p>すべて</p>&ensp;
-            <input type="radio" name="radio"><p>作業中</p>&ensp;
-            <input type="radio" name="radio"><p>完了</p>
-            <!--ラジオボタン点灯部分は必ず1つになるようにする-->
-        </div>
+            <form action="/todo/choose" class="condition" method="post">
+                <input type="radio" name="cond_list" value="all" checked="checked"><p>すべて</p>&ensp;
+                <input type="radio" name="cond_list" value="working"><p>作業中</p>&ensp;
+                <input type="radio" name="cond_list" value="finished"><p>完了</p>
+            </form>
         <table>
             <tr>
                 <th id="tableList">ID</th>

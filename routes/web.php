@@ -21,4 +21,4 @@ Route::get('todo', 'TodoController@index');
 Route::post('todo', 'TodoController@add');
 Route::post('todo/delete', 'TodoController@delete');
 Route::post('todo/toggle', 'TodoController@toggle');
-//Route::post('todo/choose', 'TodoController@choose');
+Route::post('todo/choose', 'TodoController@choose');

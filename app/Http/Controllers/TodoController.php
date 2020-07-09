@@ -38,10 +38,15 @@ class TodoController extends Controller
     }
 
     public function choose(Request $request) {
-        //ラジオボタンのテキストを取得、その値をもとにif文を作る。
-        //condition === すべて
-        //condition === 作業中
-        //condition === 完了
+
+        if ($request->input('cond_list') === 'すべて') {
+            return redirect('/todo'); 
+        } elseif ($request->input('cond_list') === '作業中') {
+            return redirect('/todo'); 
+        } elseif ($request->input('cond_list') === '完了') {
+            return redirect('/todo'); 
+        }
+        return redirect('/todo'); 
 
     }
 }
