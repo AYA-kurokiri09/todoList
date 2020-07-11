@@ -9,10 +9,11 @@
 <body>
     <div class="container">
         <h1>ToDoリスト</h1>
-            <form action="/todo/choose" class="condition" method="post">
-                <input type="radio" name="cond_list" value="all" checked="checked"><p>すべて</p>&ensp;
-                <input type="radio" name="cond_list" value="working"><p>作業中</p>&ensp;
-                <input type="radio" name="cond_list" value="finished"><p>完了</p>
+            <form action="/todo/choose" name="cond_lists" class="radioBtn" method="post" onclick="document.cond_lists.submit();">
+                @csrf
+                <input type="radio" name="cond_list" value="すべて" {{ old('cond_list','すべて') === 'すべて' ? 'checked' : '' }}><p>すべて</p>&ensp;
+                <input type="radio" name="cond_list" value="作業中" id="作業中" @if(old('cond_list', '作業中')==='作業中')checked="checked"@endif><p>作業中</p>&ensp;
+                <input type="radio" name="cond_list" value="完了" {{ old('cond_list') === '完了' ? 'checked' : '' }}><p>完了</p>
             </form>
         <table>
             <tr>
