@@ -9,11 +9,12 @@
 <body>
     <div class="container">
         <h1>ToDoリスト</h1>
-        <div class="condition">
-            <input type="radio" name="radio" checked="checked"><p>すべて</p>&ensp;
-            <input type="radio" name="radio"><p>作業中</p>&ensp;
-            <input type="radio" name="radio"><p>完了</p>
-        </div>
+            <form action="/todo/choose" name="cond_lists" class="radioBtn" method="post" onclick="document.cond_lists.submit();">
+                @csrf
+                <input type="radio" name="cond_list" value="すべて"><p>すべて</p>&ensp;
+                <input type="radio" name="cond_list" value="作業中"><p>作業中</p>&ensp;
+                <input type="radio" name="cond_list" value="完了"><p>完了</p>
+            </form>
         <table>
             <tr>
                 <th id="tableList">ID</th>

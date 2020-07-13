@@ -13,7 +13,7 @@ p {font-size: 12pt;}
 
 .container {margin-left: 5px;}
 
-.condition {display: flex;
+.radioBtn {display: flex;
         align-items: center;}
 
 table {margin: 20px 0 40px 0;

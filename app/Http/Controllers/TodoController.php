@@ -36,4 +36,20 @@ class TodoController extends Controller
         }
         return redirect('/todo');
     }
+
+    public function choose(Request $request) {
+        $value = $request->cond_list;
+        if ($value === 'すべて') {
+            $items = Content::all();
+            return view('todo.index', compact('items'));
+        } elseif ($value === '作業中') {
+            $items = Content::where('condition', '作業中')->get();
+            $param = ['items' => $items];
+            return view('todo.index', $param);
+        } elseif ($value === '完了') {
+            $items = Content::where('condition', '完了')->get();
+            $param = ['items' => $items];
+            return view('todo.index', $param);
+        }
+    }
 }
