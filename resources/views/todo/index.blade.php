@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{{ asset('todo_css/stylesheet.css') }}">
+    <link rel="stylesheet" href="{{ mix('todo_css/stylesheet.css') }}"><!-- ローカルで動かない場合はmix->assetとする -->
     <title>Todo List</title>
 </head>
 <body>
