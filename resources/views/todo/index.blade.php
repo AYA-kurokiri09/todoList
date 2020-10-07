@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{{ asset('todo_css/stylesheet.css') }}">
     <!-- ローカルで動かなかったため一時的にmix->assetとした。if文を使って自動的に切り替わるようにしたい。 -->
+    <!-- cssを少しでもつけるか -->
     <title>Todo List</title>
 </head>
 <body>
